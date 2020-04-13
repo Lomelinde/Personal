@@ -45,5 +45,3 @@ obj = {
 obj.userid = id;
 
 $done({ body: JSON.stringify(obj) });
-
-// by eHpo1
