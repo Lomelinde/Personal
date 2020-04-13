@@ -1,9 +1,11 @@
 /*
 Remove the WeChat public account bottom ad
 
+[Script]
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body Wechat.js
 
-MITM = mp.weixin.qq.com
+[MITM]
+hostname = mp.weixin.qq.com
 */
 
 var obj = JSON.parse($response.body);

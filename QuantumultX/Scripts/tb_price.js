@@ -1,5 +1,12 @@
 /*
 README：https://github.com/yichahucha/surge/tree/master
+
+[Script]
+^http://amdc\.m\.taobao\.com/amdc/mobileDispatch url script-response-body tb_price.js
+^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail url script-response-body tb_price.js
+
+[MITM]
+hostname = trade-acs.m.taobao.com,amdc.m.taobao.com
  */
 
 const $tool = new Tool()
