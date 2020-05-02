@@ -241,48 +241,6 @@
  - DOMAIN-SUFFIX,zbrushcn.com,Hijacking
  - DOMAIN-SUFFIX,zhzzx.com,Hijacking
 
-# Apple
-# > Apple URL Shortener
- - DOMAIN-SUFFIX,appsto.re,Apple
-# > iBooks Store download
- - DOMAIN,books.itunes.apple.com,Apple
-# > iTunes Store Moveis Trailers
- - DOMAIN,hls.itunes.apple.com,Apple
-# > App Store Preview
- - DOMAIN,apps.apple.com,Apple
- - DOMAIN,itunes.apple.com,Apple
-# > TestFlight
- - DOMAIN,testflight.apple.com,Apple
-# > Spotlight
- - DOMAIN,api-glb-sea.smoot.apple.com,Apple
-# > Dictionary
- - DOMAIN,lookup-api.apple.com,Apple
-# > Apple Music
- - DOMAIN-SUFFIX,music.apple.com,DIRECT
-# > Other
- - DOMAIN,ocsp.apple.com,Apple
- - DOMAIN,ocsp.verisign.net,Apple
- - DOMAIN-SUFFIX,digicert.com,Apple
- - DOMAIN-SUFFIX,entrust.net,Apple
- - DOMAIN-SUFFIX,blobstore.apple.com,Apple
-# > Direct
- - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
- - DOMAIN,safebrowsing.googleapis.com,DIRECT
- - DOMAIN-SUFFIX,aaplimg.com,DIRECT
- - DOMAIN-SUFFIX,apple.co,DIRECT
- - DOMAIN-SUFFIX,apple.com,DIRECT
- - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
- - DOMAIN-SUFFIX,appstore.com,DIRECT
- - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
- - DOMAIN-SUFFIX,crashlytics.com,DIRECT
- - DOMAIN-SUFFIX,icloud.com,DIRECT
- - DOMAIN-SUFFIX,icloud-content.com,DIRECT
- - DOMAIN-SUFFIX,me.com,DIRECT
- - DOMAIN-SUFFIX,mzstatic.com,DIRECT
- - DOMAIN-SUFFIX,akadns.net,DIRECT
- - DOMAIN,www-cdn.icloud.com.akadns.net,DIRECT
- - DOMAIN,e.crashlytics.com,REJECT
-
 # (GlobalMedia)
 # (Music)
 # > Deezer
@@ -473,20 +431,6 @@
  - DOMAIN,youtubei.googleapis.com,GlobalMedia
 
 # (DNS Cache Pollution Protection)
-# > Google
- - DOMAIN-SUFFIX,ampproject.org,Proxy
- - DOMAIN-SUFFIX,appspot.com,Proxy
- - DOMAIN-SUFFIX,blogger.com,Proxy
- - DOMAIN-SUFFIX,getoutline.org,Proxy
- - DOMAIN-SUFFIX,gvt0.com,Proxy
- - DOMAIN-SUFFIX,gvt1.com,Proxy
- - DOMAIN-SUFFIX,gvt3.com,Proxy
- - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Proxy
- - DOMAIN-KEYWORD,google,Proxy
- - DOMAIN-KEYWORD,blogspot,Proxy
-# > Microsoft
- - DOMAIN-SUFFIX,onedrive.live.com,Proxy
- - DOMAIN-SUFFIX,xboxlive.com,Proxy
 # > Facebook
  - DOMAIN-SUFFIX,cdninstagram.com,Proxy
  - DOMAIN-SUFFIX,fb.com,Proxy
@@ -858,6 +802,8 @@
  - DOMAIN-KEYWORD,pinterest,Proxy
  - DOMAIN-KEYWORD,porn,Proxy
  - DOMAIN-KEYWORD,wikileaks,Proxy
+
+# (Region-Restricted Access Denied)
  - DOMAIN-SUFFIX,apartmentratings.com,Proxy
  - DOMAIN-SUFFIX,apartments.com,Proxy
  - DOMAIN-SUFFIX,bankmobilevibe.com,Proxy
@@ -907,7 +853,60 @@
  - DOMAIN-SUFFIX,zattoo.com,Proxy
 
 # (The Most Popular Sites)
+# > Apple
+# >> Apple URL Shortener
+ - DOMAIN-SUFFIX,appsto.re,Apple
+# >> iBooks Store download
+ - DOMAIN,books.itunes.apple.com,Apple
+# >> iTunes Store Moveis Trailers
+ - DOMAIN,hls.itunes.apple.com,Apple
+# >> App Store Preview
+ - DOMAIN,apps.apple.com,Apple
+ - DOMAIN,itunes.apple.com,Apple
+# >> TestFlight
+ - DOMAIN,testflight.apple.com,Apple
+# >> Spotlight
+ - DOMAIN,api-glb-sea.smoot.apple.com,Apple
+# >> Dictionary
+ - DOMAIN,lookup-api.apple.com,Apple
+# >> Apple Music
+ - DOMAIN-SUFFIX,music.apple.com,DIRECT
+# >> Other
+ - DOMAIN,ocsp.apple.com,Apple
+ - DOMAIN,ocsp.verisign.net,Apple
+ - DOMAIN-SUFFIX,digicert.com,Apple
+ - DOMAIN-SUFFIX,entrust.net,Apple
+ - DOMAIN-SUFFIX,blobstore.apple.com,Apple
+# >> Direct
+ - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+ - DOMAIN,safebrowsing.googleapis.com,DIRECT
+ - DOMAIN-SUFFIX,aaplimg.com,DIRECT
+ - DOMAIN-SUFFIX,apple.co,DIRECT
+ - DOMAIN-SUFFIX,apple.com,DIRECT
+ - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+ - DOMAIN-SUFFIX,appstore.com,DIRECT
+ - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+ - DOMAIN-SUFFIX,crashlytics.com,DIRECT
+ - DOMAIN-SUFFIX,icloud.com,DIRECT
+ - DOMAIN-SUFFIX,icloud-content.com,DIRECT
+ - DOMAIN-SUFFIX,me.com,DIRECT
+ - DOMAIN-SUFFIX,mzstatic.com,DIRECT
+ - DOMAIN-SUFFIX,akadns.net,DIRECT
+ - DOMAIN,www-cdn.icloud.com.akadns.net,DIRECT
+ - DOMAIN,e.crashlytics.com,REJECT
 # > Google
+# >> DNS
+ - DOMAIN-SUFFIX,ampproject.org,Proxy
+ - DOMAIN-SUFFIX,appspot.com,Proxy
+ - DOMAIN-SUFFIX,blogger.com,Proxy
+ - DOMAIN-SUFFIX,getoutline.org,Proxy
+ - DOMAIN-SUFFIX,gvt0.com,Proxy
+ - DOMAIN-SUFFIX,gvt1.com,Proxy
+ - DOMAIN-SUFFIX,gvt3.com,Proxy
+ - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Proxy
+ - DOMAIN-KEYWORD,google,Proxy
+ - DOMAIN-KEYWORD,blogspot,Proxy
+# >> Other
  - DOMAIN-SUFFIX,abc.xyz,Proxy
  - DOMAIN-SUFFIX,android.com,Proxy
  - DOMAIN-SUFFIX,androidify.com,Proxy
@@ -955,6 +954,9 @@
  - DOMAIN-SUFFIX,yt.be,Proxy
  - DOMAIN-SUFFIX,ytimg.com,Proxy
 # > Microsoft
+# > DNS
+ - DOMAIN-SUFFIX,onedrive.live.com,Proxy
+ - DOMAIN-SUFFIX,xboxlive.com,Proxy
 # >> Microsoft OneDrive
  - DOMAIN-SUFFIX,1drv.com,Proxy
  - DOMAIN-SUFFIX,1drv.ms,Proxy
@@ -964,6 +966,17 @@
  - DOMAIN-SUFFIX,storage.live.com,Proxy
  - DOMAIN-SUFFIX,storage.msn.com,Proxy
  - DOMAIN,oneclient.sfx.ms,Proxy
+# >> Direct
+ - DOMAIN-SUFFIX,microsoft.com,DIRECT
+ - DOMAIN-SUFFIX,msecnd.net,DIRECT
+ - DOMAIN-SUFFIX,office365.com,DIRECT
+ - DOMAIN-SUFFIX,outlook.com,DIRECT
+ - DOMAIN-SUFFIX,s-microsoft.com,DIRECT
+ - DOMAIN-SUFFIX,visualstudio.com,DIRECT
+ - DOMAIN-SUFFIX,windows.com,DIRECT
+ - DOMAIN-SUFFIX,windowsupdate.com,DIRECT
+ - DOMAIN,officecdn-microsoft-com.akamaized.net,DIRECT
+
 # > Other
  - DOMAIN-SUFFIX,0rz.tw,Proxy
  - DOMAIN-SUFFIX,4bluestones.biz,Proxy
@@ -1115,16 +1128,6 @@
  - DOMAIN-SUFFIX,miui.com,DIRECT
  - DOMAIN-SUFFIX,miwifi.com,DIRECT
  - DOMAIN-SUFFIX,xiaomi.com,DIRECT
-# > Microsoft
- - DOMAIN-SUFFIX,microsoft.com,DIRECT
- - DOMAIN-SUFFIX,msecnd.net,DIRECT
- - DOMAIN-SUFFIX,office365.com,DIRECT
- - DOMAIN-SUFFIX,outlook.com,DIRECT
- - DOMAIN-SUFFIX,s-microsoft.com,DIRECT
- - DOMAIN-SUFFIX,visualstudio.com,DIRECT
- - DOMAIN-SUFFIX,windows.com,DIRECT
- - DOMAIN-SUFFIX,windowsupdate.com,DIRECT
- - DOMAIN,officecdn-microsoft-com.akamaized.net,DIRECT
 # > NetEase
  - DOMAIN-SUFFIX,163.com,DIRECT
  - DOMAIN-SUFFIX,126.net,DIRECT
