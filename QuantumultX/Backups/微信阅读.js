@@ -1,3 +1,12 @@
+/*
+Made by Meeta (微信阅读)
+
+[Script]
+https?:\/\/i\.weread\.qq.com\/pay\/memberCardSummary\?pf url script-response-body wxyd.js
+
+[MITM]
+hostname = i.weread.qq.com
+*/
 var result = body
 let path = "/pay/memberCardSummary";
 if (url.indexOf(path) != -1){
@@ -7,9 +16,3 @@ if (url.indexOf(path) != -1){
   result = JSON.stringify(obj);
 }
 result;
-
-/*
-Made by Meeta (微信阅读)
-https?:\/\/i\.weread\.qq.com\/pay\/memberCardSummary\?pf
-hostname = i.weread.qq.com
-*/
