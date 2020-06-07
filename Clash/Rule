@@ -394,15 +394,6 @@
  - IP-CIDR6,2001:b28:f23d::/48,Proxy,no-resolve
  - IP-CIDR6,2001:b28:f23f::/48,Proxy,no-resolve
  - IP-CIDR6,2001:67c:4e8::/48,Proxy,no-resolve
-# > Line
- - DOMAIN-SUFFIX,line.me,Proxy
- - DOMAIN-SUFFIX,line-apps.com,Proxy
- - DOMAIN-SUFFIX,line-scdn.net,Proxy
- - DOMAIN-SUFFIX,naver.jp,Proxy
- - IP-CIDR,103.2.30.0/23,Proxy,no-resolve
- - IP-CIDR,125.209.208.0/20,Proxy,no-resolve
- - IP-CIDR,147.92.128.0/17,Proxy,no-resolve
- - IP-CIDR,203.104.144.0/21,Proxy,no-resolve
 # > Other
  - DOMAIN-SUFFIX,4shared.com,Proxy
  - DOMAIN-SUFFIX,520cc.cc,Proxy
@@ -783,28 +774,27 @@
  - DOMAIN,lookup-api.apple.com,Apple
 # >> Apple Music
  - DOMAIN-SUFFIX,music.apple.com,DIRECT
-# >> Other
+# >> Others
  - DOMAIN,ocsp.apple.com,Apple
  - DOMAIN,ocsp.verisign.net,Apple
  - DOMAIN-SUFFIX,digicert.com,Apple
  - DOMAIN-SUFFIX,entrust.net,Apple
  - DOMAIN-SUFFIX,blobstore.apple.com,Apple
-# >> Direct
- - DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
- - DOMAIN,safebrowsing.googleapis.com,DIRECT
- - DOMAIN-SUFFIX,aaplimg.com,DIRECT
- - DOMAIN-SUFFIX,apple.co,DIRECT
- - DOMAIN-SUFFIX,apple.com,DIRECT
- - DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
- - DOMAIN-SUFFIX,appstore.com,DIRECT
- - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
- - DOMAIN-SUFFIX,crashlytics.com,DIRECT
- - DOMAIN-SUFFIX,icloud.com,DIRECT
- - DOMAIN-SUFFIX,icloud-content.com,DIRECT
- - DOMAIN-SUFFIX,me.com,DIRECT
- - DOMAIN-SUFFIX,mzstatic.com,DIRECT
- - DOMAIN-SUFFIX,akadns.net,DIRECT
- - DOMAIN,www-cdn.icloud.com.akadns.net,DIRECT
+ - DOMAIN,safebrowsing.urlsec.qq.com,Apple
+ - DOMAIN,safebrowsing.googleapis.com,Apple
+ - DOMAIN-SUFFIX,aaplimg.com,Apple
+ - DOMAIN-SUFFIX,apple.com,Apple
+ - DOMAIN-SUFFIX,apple-cloudkit.com,Apple
+ - DOMAIN-SUFFIX,appstore.com,Apple
+ - DOMAIN-SUFFIX,cdn-apple.com,Apple
+ - DOMAIN-SUFFIX,crashlytics.com,Apple
+ - DOMAIN-SUFFIX,icloud.com,Apple
+ - DOMAIN-SUFFIX,icloud-content.com,Apple
+ - DOMAIN-SUFFIX,me.com,Apple
+ - DOMAIN-SUFFIX,mzstatic.com,Apple
+ - DOMAIN-SUFFIX,akadns.net,Apple
+ - DOMAIN,www-cdn.icloud.com.akadns.net,Apple
+ - IP-CIDR,17.0.0.0/8,Apple,no-resolve
  - DOMAIN,e.crashlytics.com,REJECT
 # > Google
 # >> DNS
@@ -1193,6 +1183,8 @@
  - DOMAIN-SUFFIX,wiley.com,DIRECT
  - DOMAIN-SUFFIX,worldbank.org,DIRECT
  - DOMAIN-SUFFIX,worldscientific.com,DIRECT
+# > Plex Media Server
+- DOMAIN-SUFFIX,plex.tv,DIRECT
 # > Other
  - DOMAIN-SUFFIX,cn,DIRECT
  - DOMAIN-SUFFIX,360in.com,DIRECT
