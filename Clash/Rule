@@ -1,6 +1,4 @@
 # Unbreak
-# > General
- - DOMAIN,app.adjust.com,DIRECT
 # > Google
  - DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
  - DOMAIN,dl.google.com,DIRECT
@@ -8,11 +6,6 @@
 # > Tencent
  - DOMAIN,livew.l.qq.com,DIRECT
  - DOMAIN,vd.l.qq.com,DIRECT
-# > Strava
- - DOMAIN,analytics.strava.com,DIRECT
-# > Umeng
- - DOMAIN,msg.umeng.com,DIRECT
- - DOMAIN,msg.umengcloud.com,DIRECT
 
 # Internet Service Providers Hijacking
  - DOMAIN-SUFFIX,17gouwuba.com,Hijacking
