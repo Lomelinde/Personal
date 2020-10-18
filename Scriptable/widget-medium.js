@@ -8,13 +8,13 @@
 const apiKey = ""
 
 // Set the locale code. Leave blank "" to match the device's locale. You can change the hard-coded text strings in the TEXT section below.
-let locale = "en"
+let locale = ""
 
 // Set to true for fixed location, false to update location as you move around
 const lockLocation = true
 
 // The size of the widget preview in the app.
-const widgetPreview = "large"
+const widgetPreview = "medium"
 
 // Set to true for an image background, false for no image.
 const imageBackground = true
@@ -45,19 +45,15 @@ const items = [
   row,
   
     column,
+    greeting,
     date,
     battery,
-    sunrise,
-    space,
+    text("点我打开记事本"),
     
-    column(90),
+    column,right,
     current,
+    sunrise,
     future,
-    
-  row,
-  
-    column,
-    events,
   
 ]
 
@@ -75,10 +71,10 @@ const dateSettings = {
   dynamicDateSize: false
 
   // If the date is not dynamic, should it be large or small?
-  ,staticDateSize: "large"
+  ,staticDateSize: "small"
 
   // Determine the date format for each date type. See docs.scriptable.app/dateformatter
-  ,smallDateFormat: "EEEE, MMMM d"
+  ,smallDateFormat: "MMMd日，EEEE"
   ,largeDateLineOne: "EEEE,"
   ,largeDateLineTwo: "MMMM d"
 }
@@ -122,7 +118,7 @@ const sunriseSettings = {
 const weatherSettings = {
 
   // Set to imperial for Fahrenheit, or metric for Celsius
-  units: "imperial"
+  units: "metric"
   
   // Show the location of the current weather.
   ,showLocation: false
@@ -147,49 +143,49 @@ const weatherSettings = {
 const localizedText = {
   
   // The text shown if you add a greeting item to the layout.
-  nightGreeting: "Good night."
-  ,morningGreeting: "Good morning."
-  ,afternoonGreeting: "Good afternoon."
-  ,eveningGreeting: "Good evening."
+  nightGreeting: "晚安！"
+  ,morningGreeting: "早上好！"
+  ,afternoonGreeting: "下午好！"
+  ,eveningGreeting: "晚上好！"
   
   // The text shown if you add a future weather item to the layout, or tomorrow's events.
-  ,nextHourLabel: "Next hour"
-  ,tomorrowLabel: "Tomorrow"
-
+  ,nextHourLabel: "下一小时"
+  ,tomorrowLabel: "明天"
+  
   // Shown when noEventBehavior is set to "message".
-  ,noEventMessage: "Enjoy the rest of your day."
+  ,noEventMessage: "尽情享受你的一天！"
   
   // The text shown after the hours and minutes of an event duration.
-  ,durationMinute: "m"
-  ,durationHour: "h"
-     
+  ,durationMinute: "M"
+  ,durationHour: "H"
+      
 }
 
 // Set the font, size, and color of various text elements. Use iosfonts.com to find fonts to use. If you want to use the default iOS font, set the font name to one of the following: ultralight, light, regular, medium, semibold, bold, heavy, black, or italic.
 const textFormat = {
   
   // Set the default font and color.
-  defaultText: { size: 14, color: "ffffff", font: "regular" },
+  defaultText: { size: 10, color: "ffffff", font: "regular" },
   
   // Any blank values will use the default.
-  smallDate:   { size: 17, color: "", font: "semibold" },
-  largeDate1:  { size: 30, color: "", font: "light" },
-  largeDate2:  { size: 30, color: "", font: "light" },
+  smallDate:   { size: 15, color: "", font: "light" },
+  largeDate1:  { size: 18, color: "", font: "light" },
+  largeDate2:  { size: 18, color: "", font: "light" },
   
-  greeting:    { size: 30, color: "", font: "semibold" },
+  greeting:    { size: 20, color: "", font: "semibold" },
   eventLabel:  { size: 14, color: "", font: "semibold" },
   eventTitle:  { size: 14, color: "", font: "semibold" },
   eventTime:   { size: 14, color: "ffffffcc", font: "" },
-  noEvents:    { size: 30, color: "", font: "semibold" },
+  noEvents:    { size: 20, color: "", font: "semibold" },
   
-  largeTemp:   { size: 34, color: "", font: "light" },
-  smallTemp:   { size: 14, color: "", font: "" },
+  largeTemp:   { size: 16, color: "", font: "medium" },
+  smallTemp:   { size: 13, color: "", font: "" },
   tinyTemp:    { size: 12, color: "", font: "" },
   
-  customText:  { size: 14, color: "", font: "" },
+  customText:  { size: 13, color: "", font: "light" },
   
-  battery:     { size: 14, color: "", font: "medium" },
-  sunrise:     { size: 14, color: "", font: "medium" },
+  battery:     { size: 16, color: "", font: "medium" },
+  sunrise:     { size: 12, color: "", font: "medium" },
 }
 
 /*
@@ -653,6 +649,7 @@ async function date(column) {
   if (dateSettings.staticDateSize == "small" || (dateSettings.dynamicDateSize && eventData.eventsAreVisible)) {
     let dateStack = align(column)
     dateStack.setPadding(padding, padding, padding, padding)
+    dateStack.url = "calshow://"
 
     df.dateFormat = dateSettings.smallDateFormat
     let dateText = provideText(df.string(currentDate), dateStack, textFormat.smallDate)
@@ -663,6 +660,7 @@ async function date(column) {
     df.dateFormat = dateSettings.largeDateLineOne
     let dateOne = provideText(df.string(currentDate), dateOneStack, textFormat.largeDate1)
     dateOneStack.setPadding(padding/2, padding, 0, padding)
+    dateOneStack.url = "calshow://"
     
     let dateTwoStack = align(column)
     df.dateFormat = dateSettings.largeDateLineTwo
@@ -944,6 +942,7 @@ function text(input = null) {
     // Otherwise, add the text.
     const textStack = align(column)
     textStack.setPadding(padding, padding, padding, padding)
+    textStack.url = "mobilenotes://"
     const textDisplay = provideText(input, textStack, textFormat.customText)
   }
   return displayText
