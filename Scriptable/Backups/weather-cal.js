@@ -8,7 +8,7 @@
  */
 
 // To use weather, get a free API key at openweathermap.org/appid and paste it in between the quotation marks.
-const apiKey = "a2a566a78d95f3e8d96fb86b4141b90e"
+const apiKey = ""
 
 // Set the locale code. Leave blank "" to match the device's locale. You can change the hard-coded text strings in the TEXT section below.
 let locale = ""
